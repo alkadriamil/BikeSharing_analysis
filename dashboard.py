@@ -9,8 +9,8 @@ st.set_page_config(page_title="Bike Rental Dashboard", layout="wide")
 # Load data
 @st.cache_data
 def load_data():
-    hour_df = pd.read_csv("E:/Bangkit Academy/bike_sharing/hour.csv")
-    day_df = pd.read_csv("E:/Bangkit Academy/bike_sharing/day.csv")
+    hour_df = pd.read_csv("data_input/hour.csv")
+    day_df = pd.read_csv("data_input/day.csv")
     
     # Convert date columns to datetime
     hour_df['dteday'] = pd.to_datetime(hour_df['dteday'])
