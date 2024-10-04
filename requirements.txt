@@ -1,5 +1,5 @@
-streamlit
-pandas
-matplotlib
-seaborn
+streamlit==1.28.0
+pandas==2.1.1
+matplotlib==3.8.0
+seaborn==0.13.0
 # Upload file ini untuk menginstall library pada streamlit
