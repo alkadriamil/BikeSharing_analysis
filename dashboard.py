@@ -91,6 +91,18 @@ ax.set_xlabel(None)
 ax.set_ylabel("Number of Rentals")
 st.pyplot(fig)
 
+# Hourly Rentals Trend
+st.subheader("Hourly Rental Trend")
+fig, ax = plt.subplots(figsize=(10, 6))
+sns.lineplot(data=day_df, x='hr', y='cnt', marker='o', ax=ax)
+ax.set_title('Jumlah Penyewaan Sepeda Berdasarkan Jam')
+ax.set_xlabel('Jam dalam Sehari')
+ax.set_ylabel('Total Penyewaan')
+ax.grid(True)
+ax.set_xticks(range(24))
+st.pyplot(fig)
+
+
 # Additional Insights
 st.subheader("Additional Insights")
 st.write("""
@@ -107,6 +119,8 @@ st.write("""
 6. **Temperature Correlation**: While not directly visualized here, the original data suggests a positive correlation between temperature and rental numbers.
 
 7. **Holiday Effect**: The comparison between working days and holidays shows interesting patterns, possibly reflecting leisure vs. commute usage.
+
+8. **Hourly Rentals Trend**: The hourly bike rental trend shows peaks during commuting hours (8 AM and 5-7 PM), a midday lull, and a decline after 8 PM, suggesting opportunities for targeted bike availability, maintenance during low periods, and promotional offers in off-peak hours.
 
 These insights can be valuable for inventory management, marketing strategies, and service improvements. For instance, the bike rental company could:
 - Adjust inventory based on seasonal demands
