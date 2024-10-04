@@ -91,17 +91,6 @@ ax.set_xlabel(None)
 ax.set_ylabel("Number of Rentals")
 st.pyplot(fig)
 
-# Hourly Rentals Trend
-st.subheader("Hourly Rental Trend")
-fig, ax = plt.subplots(figsize=(10, 6))
-sns.lineplot(data=day_df, x='hr', y='cnt', marker='o', ax=ax)
-ax.set_title('Jumlah Penyewaan Sepeda Berdasarkan Jam')
-ax.set_xlabel('Jam dalam Sehari')
-ax.set_ylabel('Total Penyewaan')
-ax.grid(True)
-ax.set_xticks(range(24))
-st.pyplot(fig)
-
 
 # Additional Insights
 st.subheader("Additional Insights")
